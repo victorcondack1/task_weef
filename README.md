@@ -5,14 +5,19 @@ A aplicação Weeef Events permite gerenciar eventos de forma eficiente, fornece
 Referência da API e implantação do projeto
 Para detalhes sobre a API e informações de implantação do projeto, consulte a documentação completa em [Weeef Events API Documentation](https://victors-organization-28.gitbook.io/weef-events/).
 
-Início rápido
+Início rápido:
+
 Para começar a usar a aplicação localmente, siga estas instruções:
 
 Pré-requisitos:
+
 Certifique-se de ter o Docker instalado e configurado em seu ambiente de desenvolvimento.
 
 Instalação
-Clone o repositório do projeto
+
+Clone o repositório do projeto:
+
+git clone https://github.com/victorcondack1/task_weef.git
 
 cd task_weef
 
