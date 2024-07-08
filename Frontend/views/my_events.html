@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Eventos</title>
+    <link rel="stylesheet" href="../css/my_events.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../assets/images/logo-white.svg" alt="Logo da Empresa">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../views/dashboard.html">Dashboard</a></li>
+                    <li><a href="#" class="active">Meus Eventos</a></li>
+                    <li><a href="../views/event_creation.html">Criar Evento</a></li>
+                    <li><a class="btn-logoutH" href="#">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="header">
+                <h1>Meus Eventos</h1>
+                <div class="user-info">
+                    <span id="userName">Bem-vindo, Nome do Usuário</span>
+                    <a href="#" class="btn btn-sm btn-logout">Sair</a>
+                </div>
+            </header>
+            <section class="events-list" id="eventsList">
+            </section>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/my_events.js"></script>
+</body>
+
+</html>

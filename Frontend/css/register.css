@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Gothic+A1:wght@400;500;700&family=Montserrat:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+
+*,
+body {
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.imagem-cadastro {
+    flex: 1;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/login_image.jpg');
+}
+
+.form-cadastro {
+    width: 50%;
+}
+
+.box-cadastro {
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+#img-logo {
+    margin-bottom: 80px;
+}
+
+.logo {
+    width: 50%;
+}
+
+.input-cadastro {
+    gap: 13px;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.input-cadastro input {
+    width: 300px;
+    border: none;
+    height: 40px;
+    flex-shrink: 0;
+    padding: 0 15px;
+    background: #CCC;
+    border-radius: 3px 12px;
+}
+
+.input-cadastro label {
+    font-size: 14px;
+}
+
+.input-cadastro input:focus {
+    outline: orange;
+    border: 1px solid orange;
+}
+
+.input-cadastro p {
+    color: #0117E6;
+    text-align: end;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.input-cadastro p:hover {
+    opacity: 0.8;
+}
+
+.input-senha {
+    position: relative;
+}
+
+.input-senha span {
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.submit-cadastro {
+    border: none;
+    display: flex;
+    width: 300px;
+    cursor: pointer;
+    margin-top: 5px;
+    color: #FEFEFE;
+    font-weight: 600;
+    padding: 10px 0px;
+    align-items: center;
+    line-height: normal;
+    background: orange;
+    justify-content: center;
+    border-radius: 3px 12px;
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+
+.submit-cadastro:hover {
+    opacity: 0.8;
+}
+
+.back-to-login {
+    border: none;
+    display: flex;
+    width: 300px;
+    cursor: pointer;
+    margin-top: 5px;
+    color: #FEFEFE;
+    font-weight: 600;
+    padding: 10px 0px;
+    align-items: center;
+    line-height: normal;
+    background: orange;
+    justify-content: center;
+    border-radius: 3px 12px;
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+
+.back-to-login:hover {
+    opacity: 0.8;
+}
+
+.confirm-modal {
+    width: 80px;
+    margin: 0;
+}
+
+@media screen and (max-width: 770px) {
+    .imagem-cadastro {
+        display: none;
+    }
+
+    .form-cadastro {
+        width: 100%;
+    }
+
+}

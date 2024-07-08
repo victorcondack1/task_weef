@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Criador de Eventos</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../assets/images/logo-white.svg" alt="Logo da Empresa">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="../views/my_events.html">Meus Eventos</a></li>
+                    <li><a href="../views/event_creation.html">Criar Evento</a></li>
+                    <li><a href="#" class="btn-logoutH">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="header">
+                <h1>Dashboard do Criador de Eventos</h1>
+                <div class="user-info">
+                    <span>Bem-vindo, Nome do Usuário</span>
+                    <a href="#" class="btn btn-sm btn-logout">Sair</a>
+                </div>
+            </header>
+            <section class="dashboard-content">
+                <h2>Visão Geral</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Total de Eventos</h3>
+                        <p id="totalEvents">Carregando...</p>
+                    </div>
+                    <div class="card">
+                        <h3>Eventos Hoje</h3>
+                        <p id="eventsToday">Carregando...</p>
+                    </div>
+                    <div class="card">
+                        <h3>Próximos Eventos</h3>
+                        <p id="upcomingEvents">Carregando...</p>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <canvas id="eventsChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/fetchEvents.js"></script>
+
+</body>
+
+</html>

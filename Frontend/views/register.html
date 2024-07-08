@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem-cadastro"></div>
+        <form class="form-cadastro" novalidate>
+            <div class="box-cadastro">
+                <img src="../assets/images/logo.svg" class="logo" alt="" id="img-logo">
+                <div class="input-cadastro">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="name" id="nome" required>
+                </div>
+                <div class="input-cadastro">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="input-cadastro">
+                    <label for="senha">Senha*</label>
+                    <div class="input-senha">
+                        <input type="password" name="password" id="senha" required>
+                        <span class="material-symbols-outlined btn-showsenha">visibility</span>
+                    </div>
+                </div>
+                <div class="input-cadastro">
+                    <label for="confirma-senha">Confirmar Senha*</label>
+                    <div class="input-senha">
+                        <input type="password" name="password_confirmation" id="confirma-senha" required>
+                        <span class="material-symbols-outlined btn-showsenha">visibility</span>
+                    </div>
+                </div>
+                <button class="submit-cadastro" type="button" onclick="registerUser()">Registrar</button>
+                <button class="back-to-login" type="button" onclick="window.location.href='login.html'">Voltar ao Login</button>
+                <button class="back-to-login" type="button" onclick="window.location.href='../index.html'">Voltar a home</button>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

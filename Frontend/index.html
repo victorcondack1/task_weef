@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/home.css" media="screen" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <title>Weef - Events</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="principal">
+
+            <nav class="navbar">
+                <div class="navDiv">
+                    <ul class="menu">
+                        <li class="es" id="mobileHeaderItems"><a id="lang3" href="#">Sobre</a></li>
+                        <li class="es" id="mobileHeaderItems"><a id="lang3" href="#">Contato</a></li>
+                        <li class="es" id="mobileHeaderItems"><a id="lang3" href="/views/register.html">Produtor</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="container-fluid">
+                    <div class="widget-wrap">
+                        <div class="logo">
+                            <img src="../assets/images/logo-white.svg" alt="Descrição da Imagem">
+                        </div>
+
+                    </div>
+                    <div class="container-fluid1">
+                        <div class="widget-wrap">
+                            <div class="idiomas">
+                                <ul class="menu">
+                                    <li class="menuItem" id="HeaderItems"><a id="lang3" href="#">Sobre</a></li>
+                                    <li class="menuItem" id="HeaderItems"><a id="lang3" href="#">Contato</a></li>
+                                    <li class="menuItem" id="HeaderItems"><a id="lang3" href="/views/register.html">Produtor</a></li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonsContainer">
+                        <div class="botao">
+                            <button id="registerId1" class="bot1">Produtor - Cadastro <i class="fas fa-thin fa-user"></i>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button class="bot2" id="loginId1">
+
+                                <span style="margin-right: 10px;">Produtor - Login <i class="fa fa-sign-in"
+                                        aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="botao">
+                            <button class="register" id="registerId">
+                                <i class="fas fa-thin fa-user"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="login" id="loginId">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+        </div>
+   
+    </div>
+        <section class="banner">
+        <section class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <div class="widget" id="smatTickets">
+                            <h3 class="weef-headline weef-headline-animation-type-slide-down">
+                                <span class="weef-headline-dynamic-wrapper weef-headline-text-wrapper">
+                                    <span class="weef-headline-dynamic-text">Shows</span>
+                                    <span class="weef-headline-dynamic-text active">Teatros</span>
+                                    <span class="weef-headline-dynamic-text">Eventos</span>
+                                </span>
+                            </h3>
+                            <h2 id="smartTickets" class="smart">Weef Events</h2>
+
+                        </div>
+                        <div class="celular">
+                            <img class="cel" id="animate" src="../assets/images/home_phone.png" alt="Imagem">
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        const animateElement = document.getElementById('animate');
+
+        function animateOnScroll() {
+            const elementTop = animateElement.getBoundingClientRect().top;
+
+            const windowHeight = window.innerHeight;
+
+            const scrollPercentage = (elementTop / windowHeight) * 100;
+
+            const translateY = -scrollPercentage / 2 + 5;
+
+            if (scrollPercentage < 0 && scrollPercentage < 100) {
+                animateElement.style.transform = `translateY(calc(-1% + ${translateY}%  ))`;
+            }
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        animateOnScroll();
+    </script>
+
+    <script>
+        window.onload = function () {
+            const smartTickets = document.getElementById('smartTickets');
+
+            smartTickets.style.transform = 'translateY(1.315%)';
+        };
+    </script>
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dynamicTexts = document.querySelectorAll('.weef-headline-dynamic-text');
+            let index = 0;
+
+            function toggleText() {
+                dynamicTexts.forEach((text, i) => {
+                    text.classList.toggle('active', i === index);
+                });
+                index = (index + 1) % dynamicTexts.length;
+            }
+
+            setInterval(toggleText, 2000);
+        });
+
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dynamicTexts = document.querySelectorAll('.weef-headline-dynamic-text');
+            let index = 0;
+
+            function toggleText() {
+                dynamicTexts.forEach((text, i) => {
+                    text.classList.toggle('active', i === index);
+                });
+                index = (index + 1) % dynamicTexts.length;
+            }
+
+            setInterval(toggleText, 2000); 
+        });
+
+    </script>
+
+
+    <div class="padding">
+
+    </div>
+
+    <section class="main">
+
+        <div class="content">
+            <div class="imgContainer">
+                <img id="imgPhone" class="imgPhoneMain" src="../assets/images/02.png" alt="Imagem">
+            </div>
+
+            <div class="letrinhas">
+                <h1 class="acima animated animated-fast">WEEF Events</h1>
+                <h2 class="meio">Eventos Incríveis para Todos</h2>
+                <p class="abaixo">Participe de eventos inovadores e inspiradores organizados pela WEEF.</p>
+            </div>
+        </div>
+
+    </section>
+    <div class="paddingDiv"></div>
+
+
+    <div class="paddingDiv"></div>
+
+
+
+
+
+    <div class="backgroundTickets">
+        <div class="tickets">
+
+            <div id="rotatingTickets" class="rotatingTickets">
+                <div class="weef-widget-wrap">
+                    <div class="customclass">
+                    </div>
+                    <div class="qrDiv" style="display: flex;">
+                        <div class="mainDiv">
+                            <img style="width: 100%;" loading="lazy" decoding="async" width="149" height="149"
+                                src="../assets/images/qr.png" class="attachment-large size-large wp-image-260" alt="">
+                        </div>
+                        <div id="infodiv1" class="infoDiv">
+                            <div class="informationContainer">
+                                <p>LOCAL</p>
+                                <h2>SÃO PAULO</h2>
+                            </div>
+                            <div class="information2Container">
+                                <p>ACESSO</p>
+                                <h2>ENTRADA B</p>
+                            </div>
+                            <div class="informa">
+                                <button class="inf">Mais informações</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="gridDiv">
+                        <div class="informationContainer">
+                            <p>PISTA</p>
+                            <h2>C</h2>
+                        </div>
+
+                        <div class="informationContainer">
+                            <p>COMEÇO do SHOW</p>
+                            <h2>20:00 hs</h2>
+                        </div>
+
+                        <div class="informationContainer">
+                            <p>TIPO</p>
+                            <h2>NORMAL</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="transferir">
+                </div>
+            </div>
+
+
+            <div id="rotatingTickets1" class="rotatingTickets">
+                <div class="weef-widget-wrap">
+                    <div id="ticket2" class="customclass">
+                    </div>
+                    <div class="qrDiv" style="display: flex;">
+                        <div class="mainDiv">
+                            <img style="width: 100%;" loading="lazy" decoding="async" width="149" height="149"
+                                src="../assets/images/qr.png" class="attachment-large size-large wp-image-260" alt="">
+                        </div>
+                        <div id="infodiv1" class="infoDiv">
+                            <div class="informationContainer">
+                                <p>LOCAL</p>
+                                <h2>SÃO PAULO</h2>
+                            </div>
+                            <div class="information2Container">
+                                <p>ACESSO</p>
+                                <h2>ENTRADA H</p>
+                            </div>
+                            <div class="informa">
+                                <button class="inf">Mais informações</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="gridDiv">
+                        <div class="informationContainer">
+                            <p>PISTA</p>
+                            <h2>CAMAROTE</h2>
+                        </div>
+
+                        <div class="informationContainer">
+                            <p>COMEÇO do SHOW</p>
+                            <h2>15:00 hs</h2>
+                        </div>
+
+                        <div class="informationContainer">
+                            <p>TIPO</p>
+                            <h2>VIP</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="transferir">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <section class="baixe-section">
+        <div class="buttonWeef">
+            <div class="baixe-container">
+                <div class="baixe-row">
+                    <div class="baixe-column">
+                        <div class="baixe-wrapper">
+                            <div class="baixe-widget">
+                                <h3 class="baixe-heading">Baixe <span style="color:orange">WEEF</span> agora</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="app-column">
+
+                    <a class="app-button" href="" target="_blank">
+                        <span class="app-button-content">
+                            <span class="app-button-icon">
+                                <i aria-hidden="true" style="width: 10vh; height: 5vh;" class="fab fa-apple"></i>
+                            </span>
+                            <span class="app-button-text">AppStore</span>
+                        </span>
+                    </a>
+                </div>
+                <br>
+                <div class="play-widget">
+
+                    <a class="play-button" href="" target="_blank">
+                        <span class="play-button-content">
+                            <span class="play-button-icon">
+                                <i aria-hidden="true" style="width: 10vh; height: 5vh;" class="fab fa-google-play"></i>
+                            </span>
+                            <span class="play-button-text">PlayStore</span>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer id="footer" class="" data-id="8037fbf" data-element_type="section">
+        <div id="divFooterPrincipal" class="weef-container weef-column-gap-default">
+
+            <div id="div1" class="" data-id="4912800" data-element_type="column">
+
+                <img decoding="async" width="115" height="105" src="../assets/images/logo-white.svg"
+                    class="attachment-large size-large wp-image-84" alt="">
+            </div>
+            <div id="div2" class="" data-id="03ad5b9" data-element_type="column">
+
+                <div class="">
+                    <span><a href="#" class="privaci" target="_blank">WEEF todos os direitos reservados</a></span>
+                </div>
+
+            </div>
+            <div id="div3" class="" data-id="d856992" data-element_type="column">
+
+                <a class="" href="#" target="_blank">
+                    <span class="weef-screen-only"></span>
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="" href="#" target="_blank">
+                    <span class="weef-screen-only"></span>
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="" href="#" target="_blank">
+                    <span class="weef-screen-only"></span>
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+<script>
+    const animateElementStart = document.getElementById('animate');
+
+
+    function startRotation() {
+
+        animateElementStart.style.transform = `translateY(0%)`;
+
+
+    }
+
+    window.addEventListener('load', startRotation);
+</script>
+
+<script>
+    function isElementInViewport(el) {
+    if (!el || typeof el.getBoundingClientRect !== 'function') {
+        return false;
+    }
+
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+
+function checkElementsVisibility() {
+    const animateImageStart = document.getElementById('imgPhone');
+    const animateImageStart1 = document.getElementById('imgPhone1');
+    const animateImageStart2 = document.getElementById('imgPhone2');
+
+    if (animateImageStart && isElementInViewport(animateImageStart)) {
+        animateImageStart.style.transform = 'translateY(0)';
+    }
+
+    if (animateImageStart1 && isElementInViewport(animateImageStart1)) {
+        animateImageStart1.style.transform = 'translateY(0)';
+    }
+
+    if (animateImageStart2 && isElementInViewport(animateImageStart2)) {
+        animateImageStart2.style.transform = 'translateY(0)';
+    }
+}
+
+window.addEventListener('load', checkElementsVisibility);
+window.addEventListener('scroll', checkElementsVisibility);
+
+</script>
+
+<script>
+    const animateBottomElement = document.getElementById('animateBottom');
+
+    function animateOnScroll1() {
+
+    if (animateBottomElement) {
+        const elementTop = animateBottomElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const scrollPercentage = (elementTop / windowHeight) * 100;
+        const scaleValue = 1 + (scrollPercentage / 10) * 0.3;
+        animateBottomElement.style.transform = `scale(${scaleValue})`;
+    }
+}
+
+    window.addEventListener('scroll', animateOnScroll1);
+
+    animateOnScroll1();
+</script>
+
+
+<script>
+    const rotatingTickets = document.getElementById('rotatingTickets');
+    const rotatingTickets1 = document.getElementById('rotatingTickets1');
+
+    function animateOnScroll() {
+        const elementTop = rotatingTickets.getBoundingClientRect().top;
+        const elementTop1 = rotatingTickets1.getBoundingClientRect().top;
+
+        const windowHeight = window.innerHeight;
+
+        const scrollPercentage = (elementTop / windowHeight) * 100;
+        const scrollPercentage1 = (elementTop1 / windowHeight) * 100;
+
+        const rotateValue = 1 + (scrollPercentage / 2) * 0.5;
+
+        const rotateValue1 = 1 - (scrollPercentage1 / 2) * 0.5; 
+
+        rotatingTickets.style.transform = `rotate(${rotateValue}deg)`;
+        rotatingTickets1.style.transform = `rotate(${rotateValue1}deg)`;
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+
+    animateOnScroll();
+
+    document.addEventListener('mousemove', function (event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const rotatingTickets = document.getElementById('rotatingTickets');
+        const rotatingTickets1 = document.getElementById('rotatingTickets1');
+
+        const elements = [rotatingTickets, rotatingTickets1]; 
+
+        elements.forEach(function (element) {
+            const rect = element.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            const deltaX = mouseX - centerX;
+            const deltaY = mouseY - centerY;
+
+            let rotateX = deltaY * 0.05;
+            let rotateY = deltaX * -0.05; 
+            rotateX = Math.min(5.45, Math.max(-6.45, rotateX));
+            rotateY = Math.min(5.45, Math.max(-6.45, rotateY));
+
+            element.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    });
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+    const loadEvents = async () => {
+        try {
+            const response = await fetch(`http://0.0.0.0:8000/api/v1/events`, {
+                method: 'GET',
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao buscar eventos');
+            }
+
+            const data = await response.json();
+            displayEvents(data.eventos);
+        } catch (error) {
+           
+        }
+    };
+
+    const displayEvents = (eventos) => {
+        eventos.forEach(evento => {
+            const slideHTML = `
+ <div class="swiper-slide">
+                <div class="event-info1">
+                    <h3><i class="fas fa-calendar-alt"></i> ${evento.name}</h3> 
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Local:</strong> ${evento.city}, ${evento.state}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> ${evento.address}, ${evento.number}</p>
+                    <p><i class="fas fa-info-circle"></i> <strong>Complemento:</strong> ${evento.complement}</p>
+                    <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> ${evento.phone}</p>
+                    <p><i class="fas fa-users"></i> <strong>Organizador:</strong> ${evento.organizer.name}</p>
+                </div>
+                <img src="${evento.image_url}" alt="Imagem do Evento" class="event-image" 
+                     data-evento='${JSON.stringify(evento)}'> 
+            </div>
+        
+            `;
+            swiperWrapper.innerHTML += slideHTML;
+        });
+
+        swiper.update();
+    };
+
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        
+    initialSlide: 1,
+        loop: true,
+     
+        
+    });
+  
+    window.onload = () => {
+        loadEvents();
+    };
+</script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
+    document.getElementById('registerId').addEventListener('click', function() {
+        window.location.href = '/views/register.html';
+    });
+
+    document.getElementById('loginId').addEventListener('click', function() {
+        window.location.href = '/views/login.html';
+    });
+
+document.getElementById('registerId1').addEventListener('click', function() {
+        window.location.href = '/views/register.html';
+    });
+
+    document.getElementById('loginId1').addEventListener('click', function() {
+        window.location.href = '/views/login.html';
+    });
+});
+
+</script>
+
+<script>
+    swiperWrapper.addEventListener('click', (event) => {
+    const imgElement = event.target.closest('.event-image');
+    if (imgElement) {
+        const evento = JSON.parse(imgElement.dataset.evento);
+        showEventDetails(evento);
+    }
+});
+
+const showEventDetails = (evento) => {
+    Swal.fire({
+        title: evento.name,
+        html: `
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Local:</strong> ${evento.city}, ${evento.state}</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> ${evento.address}, ${evento.number}</p>
+            <p><i class="fas fa-info-circle"></i> <strong>Complemento:</strong> ${evento.complement}</p>
+            <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> ${evento.phone}</p>
+            <p><i class="fas fa-users"></i> <strong>Organizador:</strong> ${evento.organizer.name}</p>
+        `,
+        confirmButtonText: 'Fechar'
+    });
+};
+</script>

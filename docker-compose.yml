@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - backend_network
+
+  backend:
+    build: ./Backend
+    ports:
+      - "8000:80"
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=weef_events
+      - DB_USERNAME=root
+      - DB_PASSWORD=  
+      - IMGUR_CLIENT_ID=f809a7345663659
+      - IMGUR_CLIENT_SECRET=cdcdcb1caf7120b2b683bc68fec0420217e6030f
+    depends_on:
+      - db
+    networks:
+      - backend_network
+
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes  
+      - MYSQL_DATABASE=weef_events
+      - MYSQL_ROOT_HOST=%
+    restart: always
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    driver: bridge
