@@ -1,4 +1,5 @@
-Bem-vindo ao Weeef Events
+Bem-vindo ao Weeef Events!
+
 A aplicação Weeef Events permite gerenciar eventos de forma eficiente, fornecendo uma interface amigável para criar, atualizar e excluir eventos. Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript no frontend, e Laravel no backend.
 
 Referência da API e implantação do projeto
