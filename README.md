@@ -17,7 +17,7 @@ cd task_weef
 
 Construa e execute o contêiner Docker:
 
-docker-compose up --build
+docker-compose up 
 
 Isso irá configurar e iniciar o ambiente de desenvolvimento, incluindo o servidor nginx e o banco de dados.
 
